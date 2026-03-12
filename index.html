@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="pt-br" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RMT Engenharia</title>
+    <link rel="icon" type="image/png" href="favicon.png">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&family=Montserrat:wght@700;800;900&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        rmt: {
+                            navy: '#011227',
+                            teal: '#00A3A9',
+                            light: '#F8FAFC',
+                            darkbg: '#020C17'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        heading: ['Montserrat', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .service-card { transition: all 0.3s ease; }
+        .service-card:hover { transform: translateY(-8px); }
+        
+        /* Botão flutuante do WhatsApp */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background-color: #25D366;
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+            z-index: 100;
+            transition: all 0.3s ease;
+        }
+        .whatsapp-float:hover {
+            transform: scale(1.1);
+            background-color: #20b858;
+        }
+    </style>
+</head>
+<body class="bg-white font-sans antialiased">
+
+    <nav class="flex justify-between items-center px-8 py-4 border-b border-gray-100 sticky top-0 bg-white z-50">
+    <div class="flex items-center">
+        <img src="favicon.png" alt="Ícone RMT" class="h-8 w-8 object-contain mr-3">
+        
+        <div class="flex items-center font-heading">
+            <span class="text-rmt-teal font-black text-2xl tracking-tighter text-[26px]">RMT</span>
+            <span class="text-[#011227] font-light text-xl tracking-[0.05em] ml-2 uppercase">Engenharia</span>
+        </div>
+    </div>
+    
+    <div class="hidden md:flex items-center space-x-8 text-[13px] font-bold text-gray-600 tracking-wider">
+        <a href="#servicos" class="hover:text-rmt-teal transition">SOLUÇÕES</a>
+        <a href="#diferencial" class="hover:text-rmt-teal transition">POR QUE A RMT?</a>
+        <a href="#contato" class="bg-rmt-teal text-white px-6 py-3 rounded text-[11px] font-extrabold uppercase tracking-widest shadow-sm hover:bg-rmt-navy transition">Solicitar Orçamento</a>
+    </div>
+</nav>
+
+    <main class="relative bg-[#2D3748] min-h-[85vh] flex items-center px-10">
+        <div class="max-w-4xl">
+            <div class="inline-block bg-teal-900/30 border border-rmt-teal/30 text-rmt-teal px-4 py-1.5 rounded-full text-[10px] font-bold uppercase tracking-widest mb-8">
+                Construção Civil & Engenharia
+            </div>
+            <h1 class="text-white text-5xl md:text-7xl font-black font-heading leading-[1.1] mb-8">
+                Do Projeto à<br>Execução, <br>
+                <span class="text-rmt-teal">Construímos<br> Resultados.</span>
+            </h1>
+            <p class="text-gray-300 text-lg md:text-xl max-w-xl leading-relaxed mb-10">
+                Soluções completas para a sua obra em Ijuí e região. Realizamos projetos estruturais, gerenciamos a execução com rigor técnico e resolvemos a regularização do seu imóvel.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4">
+                <a href="#contato" class="bg-rmt-teal text-white px-8 py-4 rounded font-bold flex items-center justify-center hover:bg-teal-600 transition shadow-lg text-center">
+                    Falar com um Engenheiro 
+                    <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                </a>
+                <a href="#servicos" class="border border-white/30 text-white px-8 py-4 rounded font-bold hover:bg-white/10 transition text-center">
+                    Ver Áreas de Atuação
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <section id="servicos" class="py-24 px-6 bg-white">
+        <div class="max-w-7xl mx-auto text-center mb-16">
+            <h2 class="text-[38px] font-heading font-extrabold text-[#011227] mb-4">Soluções Completas para a sua Obra</h2>
+            <div class="h-1 w-16 bg-rmt-teal mx-auto mb-8"></div>
+            <p class="text-gray-500 max-w-2xl mx-auto text-lg leading-relaxed">
+                Atendemos todas as etapas do seu empreendimento, garantindo economia, segurança estrutural e agilidade na entrega.
+            </p>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-8 max-w-7xl mx-auto">
+            <div class="bg-[#F8FAFC] p-10 rounded-[20px] border border-gray-100 service-card">
+                <div class="w-14 h-14 bg-white shadow-sm rounded-xl flex items-center justify-center mb-8">
+                    <svg class="w-7 h-7 text-rmt-teal" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                </div>
+                <h3 class="text-[22px] font-heading font-extrabold text-[#011227] mb-5">Projetos de Engenharia</h3>
+                <p class="text-gray-500 leading-relaxed mb-8 text-[15px]">Desenvolvimento de projetos complementares compatibilizados, essenciais para evitar retrabalhos e custos extras.</p>
+                <ul class="space-y-4 text-[14px] font-semibold text-gray-500">
+                    <li class="flex items-center"><svg class="w-4 h-4 text-rmt-teal mr-3" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg> Projetos Estruturais</li>
+                    <li class="flex items-center"><svg class="w-4 h-4 text-rmt-teal mr-3" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg> Instalações Hidrossanitárias</li>
+                </ul>
+            </div>
+            <div class="bg-[#F8FAFC] p-10 rounded-[20px] border border-gray-100 service-card">
+                <div class="w-14 h-14 bg-white shadow-sm rounded-xl flex items-center justify-center mb-8">
+                    <svg class="w-7 h-7 text-rmt-teal" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+                </div>
+                <h3 class="text-[22px] font-heading font-extrabold text-[#011227] mb-5">Execução e Gestão</h3>
+                <p class="text-gray-500 leading-relaxed mb-8 text-[15px]">Administramos sua construção do alicerce ao acabamento com rigoroso controle de qualidade e prazos.</p>
+            </div>
+            <div class="bg-[#F8FAFC] p-10 rounded-[20px] border border-gray-100 service-card">
+                <div class="w-14 h-14 bg-white shadow-sm rounded-xl flex items-center justify-center mb-8">
+                    <svg class="w-7 h-7 text-rmt-teal" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+                </div>
+                <h3 class="text-[22px] font-heading font-extrabold text-[#011227] mb-5">Regularização e Laudos</h3>
+                <p class="text-gray-500 leading-relaxed mb-8 text-[15px]">Desburocratizamos a legalização do seu patrimônio e diagnosticamos problemas construtivos.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="diferencial" class="bg-rmt-darkbg py-24 px-6 overflow-hidden">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-16">
+            <div class="md:w-1/2">
+                <div class="relative">
+                    <img src="desenhando.png" alt="Engenheiro desenhando projeto" class="rounded-xl shadow-2xl relative z-10 w-full object-cover">
+                    <div class="absolute -top-4 -left-4 w-full h-full border-2 border-rmt-teal/20 rounded-xl z-0"></div>
+                </div>
+            </div>
+            <div class="md:w-1/2">
+                <div class="text-rmt-teal font-bold tracking-[0.2em] uppercase text-xs mb-4">O Diferencial RMT</div>
+                <h2 class="text-white text-4xl md:text-5xl font-heading font-black leading-tight mb-8">Segurança e Economia para o seu Investimento</h2>
+                <p class="text-gray-400 text-lg mb-10 leading-relaxed font-light">
+                    Sabemos que construir, reformar ou regularizar um imóvel pode ser um processo desgastante. Nossa missão é assumir a responsabilidade técnica e gerencial do seu projeto para que você tenha paz de espírito.
+                </p>
+                <div class="space-y-10">
+                    <div class="flex items-start gap-5">
+                        <div class="bg-[#0A1A2F] p-3 rounded-lg border border-rmt-teal/20 text-rmt-teal">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M2.166 4.999A11.954 11.954 0 0010 1.944 11.954 11.954 0 0017.834 5c.11.65.166 1.32.166 2.001 0 5.225-3.34 9.67-8 11.317C5.34 16.67 2 12.225 2 7c0-.682.057-1.35.166-2.001zm11.541 3.708a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+                        </div>
+                        <div>
+                            <h4 class="text-white text-xl font-bold font-heading mb-2">Rigor Técnico Normativo</h4>
+                            <p class="text-gray-500 text-sm leading-relaxed">Obras executadas e projetos desenvolvidos estritamente dentro das normas da ABNT, garantindo a solidez e a durabilidade da sua construção.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start gap-5">
+                        <div class="bg-[#0A1A2F] p-3 rounded-lg border border-rmt-teal/20 text-rmt-teal">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 14.5h-2v-2h2v2zm0-4h-2v-4h2v4z"/></svg>
+                        </div>
+                        <div>
+                            <h4 class="text-white text-xl font-bold font-heading mb-2">Previsibilidade Financeira</h4>
+                            <p class="text-gray-500 text-sm leading-relaxed">Desenvolvemos orçamentos realistas e realizamos uma gestão focada em evitar surpresas desagradáveis no seu bolso durante a execução da obra.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contato" class="py-24 px-6 bg-white">
+        <div class="max-w-7xl mx-auto text-center mb-12">
+            <h2 class="text-[38px] font-heading font-extrabold text-rmt-navy mb-4">Vamos tirar o seu projeto do papel?</h2>
+            <p class="text-gray-500 max-w-2xl mx-auto text-lg">
+                Entre em contato para entender a sua necessidade e elaborar uma proposta personalizada.
+            </p>
+        </div>
+
+        <div class="max-w-5xl mx-auto bg-white rounded-3xl shadow-[0_20px_50px_rgba(0,0,0,0.1)] overflow-hidden flex flex-col md:flex-row border border-gray-100">
+            <div class="md:w-[42%] bg-rmt-teal p-12 text-white">
+                <h3 class="text-2xl font-heading font-extrabold mb-10 border-b border-white/20 pb-4">Fale Conosco</h3>
+                <div class="space-y-10">
+                    <div class="flex items-start gap-5">
+                        <div class="bg-white/20 p-3 rounded-lg">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/></svg>
+                        </div>
+                        <div>
+                            <p class="text-[10px] uppercase tracking-widest font-bold opacity-70 mb-1">Localização</p>
+                            <p class="text-xl font-bold">Ijuí, RS</p>
+                            <p class="text-sm opacity-80">Atendemos a região</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start gap-5">
+                        <div class="bg-white/20 p-3 rounded-lg">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+                        </div>
+                        <a href="https://wa.me/5555991923105" target="_blank" class="block hover:opacity-80 transition-opacity">
+    <div>
+        <p class="text-[10px] uppercase tracking-widest font-bold opacity-70 mb-1">WhatsApp</p>
+        <p class="text-xl font-bold">(55) 99192-3105</p>
+    </div>
+</a>
+                    </div>
+                    <div class="flex items-start gap-5">
+                        <div class="bg-white/20 p-3 rounded-lg">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20"><path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"/><path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"/></svg>
+                        </div>
+                        <div>
+                            <p class="text-[10px] uppercase tracking-widest font-bold opacity-70 mb-1">E-mail</p>
+                            <p class="text-lg font-bold">contato@rmtengenharia.com.br</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="md:w-[58%] p-12 flex flex-col justify-center items-center text-center">
+    <p class="text-gray-700 text-2xl font-bold mb-8 leading-snug max-w-sm">
+        Clique no botão abaixo para ser direcionado a um formulário e diga qual sua necessidade
+    </p>
+    
+    <a href="https://docs.google.com/forms/d/1NHonTdU68YtqrrpSB-haXt8X-lLO0NWocz9wVGnIFyE/viewform" 
+       target="_blank" 
+       class="bg-[#011227] text-white w-full max-w-sm py-5 rounded-md font-black uppercase tracking-[0.15em] text-sm flex items-center justify-center hover:bg-rmt-teal transition-all duration-300">
+        Solicitar Contato 
+        <svg class="w-4 h-4 ml-3" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/>
+        </svg>
+    </a>
+</div>
+        </div>
+    </section>
+
+    <footer class="bg-rmt-darkbg py-8 px-6 border-t border-white/5">
+    <div class="max-w-7xl mx-auto flex flex-col items-center text-center">
+        
+        <div class="mb-4">
+            <img src="RMT.png" alt="Logo RMT Engenharia" class="h-16 object-contain mx-auto">
+        </div>
+
+        <p class="text-gray-400 max-w-md text-sm leading-relaxed mb-6">
+            Soluções completas e seguras em engenharia civil, da concepção à entrega.
+        </p>
+
+        <div class="flex gap-4 mb-8">
+            <a href="https://www.instagram.com/ricardomt_/" target="_blank" class="w-9 h-9 rounded-full bg-white/5 flex items-center justify-center text-white hover:bg-rmt-teal transition duration-300">
+                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+            </a>
+            <a href="https://www.linkedin.com/in/ricardomt25/" target="_blank" class="w-9 h-9 rounded-full bg-white/5 flex items-center justify-center text-white hover:bg-rmt-teal transition duration-300">
+                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+            </a>
+            <a href="https://www.facebook.com/share/17qytJjf5G/?mibextid=wwXIfr" target="_blank" class="w-9 h-9 rounded-full bg-white/5 flex items-center justify-center text-white hover:bg-rmt-teal transition duration-300">
+                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"/></svg>
+            </a>
+        </div>
+
+        <div class="w-full border-t border-white/5 pt-6">
+            <p class="text-gray-600 text-[10px] tracking-widest uppercase">
+                &copy; 2026 RMT Engenharia - Ijuí/RS. Todos os direitos reservados.
+            </p>
+        </div>
+    </div>
+</footer>
+
+    <a href="https://wa.me/5555991923105" target="_blank" class="whatsapp-float" aria-label="Fale conosco no WhatsApp">
+        <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+    </a>
+
+</body>
+</html>
